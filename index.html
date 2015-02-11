@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes on Intro to Programming Nano Degree</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/prism.css">
+
+</head>
+<body>
+
+<section>
+	<article>
+		<header>Course Introduction</header>
+		<div class="content">
+			<h1>Setting intentions</h1>
+			<p>I'm a user experience designer by profession, but I alwasy considered myself as a maker. I don't just want to come up with a draft plan. I want to see things working as I intend them to be. I have many ideas doodled down in my sketchbook. My biggest aspiration on this journey is to bring all my ideas to life one day.</p>
+			<p>I have engough knowledge in HTML/CSS/jQuery to build small UI demos. But this body of knowledge is very fragmented. I want to consolidate that. Also I kept finding myself constrained by my lack of server-side knowledge. So I decided to take this nano degree to comb through what I knew and to fill in all the gaps. Most likely I'd like to finish this degree as soon as possible, then continue to the Front End Development Nano Degree. I'm also very interested in data analysis and visualization. That could be the 3<sup>rd</sup> one.</p>
+			
+			<h1>Think like a programmer</h1>
+			<p>Thinking like a programmer means we use:</p>
+			<ul>
+				<li><b>Procedural Thinking:</b> Breaking large goals into smaller steps that eventually get to the goal</li>
+				<li><b>Abstract Thinking:</b> Think of a universal solution that could be applied to various similar situations, not just one specific situation.</li>
+				<li><b>Systems Thinking:</b>
+					<ul>
+						<li>Systematic Debugging</li>
+						<li>Big Picture Thinking</li>
+						<li>Decision Making</li>
+					</ul>
+				</li>
+				<li><b>Technological Empathy</b> - I found this one most enchanting:
+					<p>Computers are “stupid”. We need to help the computer to understand what the problem is - speaking the language a computer would understand - so that the computer can do what we want it to do.</p>
+					<p>Computer empathy is the ability to understand what a computer is, how it works, and what it's good and bad at doing.</p>
+					<p>A computer is a tool, as are the programs we use and the programming languages used to write them. It's almost impossible to program anything substantial without a basic understanding of how these tools work.</p>
+				</li>
+				<li><b>Debugging:</b>
+					<p>Debugging is a systematic process of relentlessly identifying the cause of a computer program that doesn't work.When a program doesn't work, it's because there is a mistake (also known as a "bug") somewhere in the computer code. Since these mistakes are an unavoidable part of programming, every good programmer has a system for fixing them and that system usually looks something like this:</p>
+					<ol>
+						<li>Collect evidence (what makes this program fail?)</li>
+						<li>Generate theories (what may have caused this problem?)</li>
+						<li>Test those theories (if my theory is correct, how could I find out?)</li>
+						<li>Fix the problem</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</article>
+</section>
+<section>
+	<h1>
+		Stage 1: Make Your Web Page 
+	</h1>
+	<article>
+		<header>HTML Basics</header>
+		<div class="content">
+			<h1>How the "Web" is structured?</h1>
+			<p><em>HTML</em> is the basic document format that contains all the contents the author wants to share with the rest of the web.</p>
+			<p>Many HTML files are hyperlinked through <em>URLs</em>. By hyperlinking the URLs, we'll be able to navigate from one file to another, hence the "web".</p>
+			<p><em>HTTP</em> is the internet protocol that allows my browser to access the files stored on the server.</p>
+			
+			<h1>HTML Basics</h1>
+			<p>HTML files are written with tags and attributes.</p>
+			<p>The open tag and its close tag together with their enclosed content are called <b>Element</b>. Note that some tags are <b>void tag</b> which by itself is an element. Such as <code>&#60;br></code> or <code>&#60;img></code>. Some tages are <b>inline tag</b>, which stays in the line of the text. Some others are <b>block tag</b>, which create a rectangle box surrounding the text or image and block the content off the flowing line of the previous text. There's also another type of tag called <b>Container Tags</b>. Unlike 'paragraph element' or 'header 1 element' which specifies the importance or purpose of the text, the <em>container tag</em> is invisible, and doesn't serve any specific content but to just <em>contain</em> the elements.</p>
+		</div>
+	</article>
+	<article>
+		<header>Structured Document</header>
+		<div class="content">
+			<h1>HTML, CSS and Javascript</h1>
+			<p><b>HTML</b> is like the structure of the house. <br>
+				<b>CSS</b> is like the interior design of the house - what color is the wall, what patter is the rug...<br>
+				<b>Javascript</b> is the tools to help you get around the house and to perform certain tasks. Things like the stove for cooking a meal, a screw driver to hang up a shelf… are a good analogy of what Javascript does to a webpage.
+			</p>
+			<h1>Tree-like Structure &amp; Boxify</h1>
+			<p>DOM, Document Object Model, "defines the logical structure of documents and the way a document is accessed and manipulated."(<a href="www.w3.org" target="_blank">W3 School</a>).</p>
+			<p>HTML tags or elements are written in a nested structure, like a tree. We should carefully nesting the block elements inside the container elements, and inline elements inside the block elements. Also we need to pay attention to the semantic use of the the tags. For example, a title should go into tags like <code>&#60;h1></code> or <code>&#60;h2></code>. The main text content is often wrapped in <code>&#60;p></code>. HTML file should be well structured, readable, and ready for the browser to interprete.</p>
+			<p>Since all the HTML elements are ensencially a rectangular box, when a front end developer receives a design mockup from the graphic designer, the first thing she does is to 'boxify' the mockup, which will serve as the basis of the HTML structure she would write later.</p>
+
+			<h1>Why Use CSS</h1>
+			<p>There're 3 ways to tell HTML what each of its elements should look like:</p>
+			<ol>
+				<li>Inside the element, define the style as element attribute:<br>
+					<pre><code class="language-markup">&#60;h1 style="color: #555; font-size: 18px; font-style: italic;">Title&#60;/h1></code></pre>
+				</li>
+				<li>Inside the <code>&#60;head></code> of the HTML file:<br>
+					<pre><code class="language-markup">&#60;html>
+	&#60;head>
+		&#60;title>My Page&#60;/title>
+		&#60;style>
+			h1 {
+				color: #555;
+				font-size: 18px;
+				font-style: italic;
+			}
+		&#60;/style>
+	&#60;/head>
+	&#60;body>
+	...
+	</code></pre></li>
+				<li>Write the CSS in a separate file, and link to that file from the HTML:<br>
+					<pre><code class="language-markup">&#60;html>
+	&#60;head>
+		&#60;title>My Page&#60;/title>
+		&#60;link rel="stylesheet" type="text/css" href="style.css">
+	&#60;/head>
+	&#60;body>
+	...
+	</code></pre></li>
+			</ol>
+			<p>The first method is not recommended. The last method is recommented.</p>
+			<p>When we write code, one basic principle is <b>DRY</b>, which stands for <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">Don't Repeat Yourself</a>. When you put all the style definition in each and every HTML element, understandably you'll ended up writing a lot of repeatitive code, like defining what the paragraph font should be, again and again, every time you have a new paragraph element. The second method is better than the first, because it allows you to define, for instance the <code>&#60;h1></code> once, then you'll be able to apply that same style to all the <code>&#60;h1></code> appeared in this HTML file.</p>
+			<p>However, the last method is the most recommended, especially when we're dealing with large websites where there're tons of HTML files that need to follow the same graphic style. By writing a separate CSS file, we can simply link to that same CSS from multiple HTML files. This way we avoided repeating ourselves.</p>
+			<p>The "Don't Repeat Yourself" principle is not just so that we can write less code; It's also important when we're debugging or dealing with changes. If the designer decided to change the color of all the hyperlinks in this website... I would be thanking myself for writing a separate CSS file.</p>
+			<h1>Cascading Style Sheets</h1>
+			<p>"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">specific</a> rule takes effect.</p>
+			<p>This idea is called <b>inheritance</b>.</p>
+			<h1>Flexbox</h1>
+			<p>Positioning HTML block elements used to be a very complicated task. In the recent working draft, the W3 people came up with the like of <code>display: flex;</code>. Here's a very in-depth <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">tutorial on Flexbox</a>.</p>
+			<p>Here's a <a href="http://www.sketchingwithcss.com/samplechapter/cheatsheet.html" target="_blank">Flex Box Cheatsheet</a>.</p>
+			<h1>Remember to Validate the Code</h1>
+			<p>To validate the HTML, go to <a href="http://validator.w3.org/check" target="_blank">this link</a>.</p>
+			<p>To validate the CSS, go to <a href="http://jigsaw.w3.org/css-validator/" target="_blank">this link</a>.</p>
+		</div>
+	</article>
+</section>
+	<!-- Starting Course 2 -->
+<section>
+	<h1>Stage 2: Tell the Computer What to do</h1>
+	<article>
+		<header>"Serious" Programming</header>
+		<div class="content">
+			<h1>The difference between<br> a toaster and a computer</h1>
+			<p>A toaster has designated function - to toast. Even though you can add advanced features such as setting a timer, automatically adjusting the temperature based on thickness of the bread... etc., it’s function is still to toast.</p>
+			<p>A computer on the other hand, is an universal machine that can be programmed to perform different functions. A computer without any program installed on it is a dumb machine that can’t do anything. It doesn’t have any designated function. But programs do. Each and every program has a disgnate function to fulfill. Once a computer is programmed, it can do anything - any computational thing.</p>
+			<p>So what is a program? A program is a specifically and strictly defined <em>sequence of steps</em>. When we program, we're essentially designing the sequence of steps the computer needs to take to fulfill the function we want. The program communicates our ideas to the computer in the language a computer understands.</p>
+			<h1>Natural Language vs. programming language</h1>
+			<p>Natural language like English or Mandarin, is <em>ambiguous</em> and <em>verbose</em>. For instance the word 'biweekly' can mean either twice a week or every two weeks. Natual language relies a lot on the context to express its precise meaning, hence its verbosity.</p>
+			<p>Programming language follows a much more strict grammar, which doesn't leave any room for syntax error or subjective interpretation.
+			</p>
+			<h1>Backus-Naur Form</h1>
+			<p><b>&#60;non-terminal> &#8594; replacement</b></p>
+			<p>BNF is a <em>notation technique</em> for <em>context-free grammars</em>, often used to describe the syntax of languages used in computing. <a href="http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form" target="_blank">BNF on Wikipedia</a>.</p>
+			<p>The derivation of the Backus-Naur Form goes like this:</p>
+			<img src="img/backus-naur-derivation.png" alt="Backus Naur Form Derivation" />
+		</div>
+	</article>
+	<article>
+		<header>Variables and Strings</header>
+		<div class="content">
+			<h1>Variables and Strings Basic</h1>
+			<p>The beginning of the session brushed on the basic concept of a <em>variable</em>... didn't find new things to note about ... </p>
+			<p>The <em>string</em>... Here are things I need to pay attention:</p>
+			<p><b>Unlike Javascript, Python cannot add a <em>string</em> to a number.</b></p>
+			<p>But Python can multiply string with a number, like this:</p>
+			<pre class="language-python"><code>print "!" + 3        # This will result an error
+print "!" * 3        # This will output "!!!"</code></pre>
+			<p>Python uses tripple quote for multi-line text.</p>
+			<pre class="language-python"><code># In addition to using single quotes (') or double quotes (")
+# to create a string, you can also use TRIPLE quotes to create
+# a multi-line string. 
+
+print """I am a string 
+that takes up 
+multiple lines"""
+
+print '''I am also a string
+that makes up multiple lines!'''
+
+print '''
+&#60;div class="concept">
+    &#60;div class="concept-title">
+        Multi-line strings
+    &#60;/div>
+    &#60;div class="concept-description">
+        Multi-line strings can be made with triple single 
+        quotes or triple double quotes. But I'm not sure
+        why they are useful yet.
+    &#60;/div>
+&#60;/div>
+'''</code></pre>
+			<h1>String Indexing in Python</h1>
+			<p>Understand <code>s[x]</code> and <code>s[x:y]</code>:</p> 
+			<ul>
+				<li>The stirng <code> s</code> is considered as an array of characters.</li> 
+				<li>In the first instance, <code>x</code> is the index position of that character. <code>x</code> belongs to range [0, s.length). If <code>x</code> goes beyond <code>s.length-1</code>, <code>s[x]</code> is undefined.</li>
+				<li>In the second instance, <code>x</code> and <code>y</code> can be any integer. If both <code>x</code> and <code>y</code> are within the string's range, and if <code>x</code> is smaller than <code>y</code>, <code>s[x:y]</code> outputs the characters between and include <code>s[x]</code> and <code>s[y-1]</code>.</li>
+				<li>If <code>x</code> equals or is larger than <code>y</code>, or if <code>x</code> and <code>y</code> are out of the range of the string, then <code>s[x:y]</code> will output an empty string. It's still a valid expression.</li>
+			</ul>
+			<p>The caveat here is, when you refer to a <b>index range</b> <code>s[x:y]</code> it will always be a valid expression, even if x or y is referring to a position that doesn’t exist in the string.</p>
+			<p>But when you refer to a <b>position</b>, <code>s[x]</code>, <em>x</em> has to be an index position <em>s</em> does have. For instance,</p>
+<pre class="language-python"><code>s = ''
+print s[0]    # Error</code></pre>
+<p>This would throw an error because <em>s</em> is empty, thus <code>s[0]</code> doesn’t exist.</p>
+
+			<p>Also pay attention to <code>s[x]</code> when x &#60; 0. <code>s[-1]</code> is referring to the last letter in the string, when the string is not empty.</p>
+			<h1>Find String</h1>
+			<pre class="language-python"><code>string.find(s, sub[, start[, end]])
+string.find(s, i)      # i is any integer</code></pre>
+			<p>
+			Find the exact match <code>s</code> in <code>string</code>. It returns the lowest index position of the <code>s</code>. If a substring <code>sub</code> is provided, defined by the start and the end indice in the <code>string</code>, then this method will look for the target string <code>s</code> only in the substring.</p>
+			<p><code>.find</code> method returns -1 if the target string is not found in the searched string. The searched string and target string has to match exactly, including the upper or lower cases...</p>
+			<pre class="language-python"><code>print "text".find("text")     # prints 0
+print "text".find("Text")     # prints -1
+print "text".find("")         # prints 0
+print "text".find(" ")        # prints -1 </code></pre>
+			<p>The example below shed light on how a simple “Find and Replace” function seen in all kinds of text editors might actually be programmed:</p>
+			<pre class="language-python"><code>print "Example 3: using find to get rid of exclamation marks!!"
+example = "Wow! Python is great! Don't you think?"
+first = example.find('!')
+second = example.find('!', first + 1)
+new_string = example[:first] + example[first+1:second] + example[second+1:]
+print new_string # oops, I should probably replace the !s with periods
+new_string = example[:first] +'.'+ example[first+1:second] +'.'+ example[second+1:]
+print new_string
+</code></pre>
+			<p>Pay attention here how to use the 2nd argument in the function to find the occurences after the first one:</p>
+			<pre class="language-python"><code>second = example.find('!', first + 1)</code></pre>
+
+		</div>
+	</article>
+	<article>
+		<header>Input > Function > Output</header>
+		<div class="content">
+			<h1>Input &amp; Output</h1>
+			<p><em>Input</em> is what you feed to a procedure, or a function. <em>Output</em> is the result of the procedure.</p>
+			<p>When we define a function to produce some result, we need to write an expression starting with <code>return</code>. Otherwise the function won't give you any result, or <em>output</em>.
+			<pre class="language-python"><code>def sum(a, b):
+	a = a + b
+
+print sum(5,3)         # It will print "None".</code></pre>
+			<p>Also, function doesn't change the value of the input. Here's another example:</p>
+			<pre class="language-python"><code>def sum(a,b):
+	a = a + b
+	return a
+
+x, y = 5, 3
+print (x, y)      # >>>8
+print x           # >>>5</code></pre>
+
+			<h1>Procedure Composition</h1>
+			<p><em>Procedure Composition</em> means to use the output of one procudure as the input of another procedure. For example:</p>
+			<pre class="language-python"><code>def sq(a):
+	return a * a
+print sq(sq(35))      # >>> (35^2)^2</code></pre>
+			<p>Procedure Composition can lead to many interesting and complex results.</p>
+		</div>
+	</article>
+</section>
+<script src="js/prism.js"></script>
+</body>
+</html>

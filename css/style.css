@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:300,400|Pacifico);
+
+body, html {
+	padding: 0;
+	margin: 0;
+	background: #453E3F;
+	font: 300 16px/1.5 'Roboto', sans-serif;
+}
+section {
+	border-bottom: 2px dotted #fcfcfc;
+	padding: 25px 0;
+}
+section > h1 {
+	color: #fcfcfc;
+	background-color: #453e3f;
+	max-width: 40%;
+	margin: 0px auto;
+	padding: 0 .5em;
+	font: 1.5em 'Pacifico', cursive;
+	text-align: center;
+	text-transform: capitalize;
+	margin-top: -2em;
+}
+article {
+	margin: 75px auto;
+	padding: 0;
+	max-width: 80%;
+	background: #fcfcfc;
+	box-sizing: border-box;
+}
+article header {
+	font: lighter 1em/1 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	color: #fff;
+	background: #66e5d1;
+	/*text-align: center;*/
+	margin: 0;
+	padding: 1em;
+}
+article .content {
+	padding: 50px;
+	color: #404040;
+}
+article h1 {
+	font: 300 2em/1 'Open Sans', sans-serif;
+	color: #66e5d1;
+	text-transform: capitalize;
+	margin: .75em 0 .5em 0;
+}
+article img {
+	max-width: 100%;
+}
+article p, article ul, article li{
+	font-weight: 300;
+}
+article p {
+	margin: 0 0 1em 0;
+}
+article ul {
+	/*padding: 0 1em;*/
+}
+
+article a {
+	text-decoration: none;
+	color: inherit;
+	box-shadow: inset 0 -5px 0 #6CF4DE;
+}
+article a:hover {
+	background: #6CF4DE;
+}
