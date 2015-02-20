@@ -4,19 +4,22 @@
 	<title>Notes on Intro to Programming Nano Degree</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/prism.css">
-
 </head>
 <body>
-
+<header>
+	<h1>Notes</h1>
+	<p>This is my personal notes on Udacity Nano Degree <a href="https://www.udacity.com/course/nd000" target="_blank">Intro to Programming</a>.</p>
+</header>
 <section>
+	<h2>Introduction</h2>
 	<article>
-		<header>Course Introduction</header>
+		<h2>Preparation</h2>
 		<div class="content">
-			<h1>Setting intentions</h1>
-			<p>I'm a user experience designer by profession, but I alwasy considered myself as a maker. I don't just want to come up with a draft plan. I want to see things working as I intend them to be. I have many ideas doodled down in my sketchbook. My biggest aspiration on this journey is to bring all my ideas to life one day.</p>
+			<p class="title">Setting intentions</p>
+			<p>I'm a user experience designer by profession, but I always considered myself as a maker. I don't just want to come up with a draft plan. I want to see things working as I intend them to. I have many ideas doodled down in my sketchbook. My greatest aspiration on this journey is to bring all my ideas to life one day.</p>
 			<p>I have engough knowledge in HTML/CSS/jQuery to build small UI demos. But this body of knowledge is very fragmented. I want to consolidate that. Also I kept finding myself constrained by my lack of server-side knowledge. So I decided to take this nano degree to comb through what I knew and to fill in all the gaps. Most likely I'd like to finish this degree as soon as possible, then continue to the Front End Development Nano Degree. I'm also very interested in data analysis and visualization. That could be the 3<sup>rd</sup> one.</p>
 			
-			<h1>Think like a programmer</h1>
+			<p class="title">Think like a programmer</p>
 			<p>Thinking like a programmer means we use:</p>
 			<ul>
 				<li><b>Procedural Thinking:</b> Breaking large goals into smaller steps that eventually get to the goal</li>
@@ -28,10 +31,9 @@
 						<li>Decision Making</li>
 					</ul>
 				</li>
-				<li><b>Technological Empathy</b> - I found this one most enchanting:
-					<p>Computers are “stupid”. We need to help the computer to understand what the problem is - speaking the language a computer would understand - so that the computer can do what we want it to do.</p>
+				<li><b>Technological Empathy</b> - I find this one most enchanting:
+					<p>Computers are “stupid". We need to help the computer to understand what the problem is - speaking the language a computer would understand - so that the computer can do what we want it to do.</p>
 					<p>Computer empathy is the ability to understand what a computer is, how it works, and what it's good and bad at doing.</p>
-					<p>A computer is a tool, as are the programs we use and the programming languages used to write them. It's almost impossible to program anything substantial without a basic understanding of how these tools work.</p>
 				</li>
 				<li><b>Debugging:</b>
 					<p>Debugging is a systematic process of relentlessly identifying the cause of a computer program that doesn't work.When a program doesn't work, it's because there is a mistake (also known as a "bug") somewhere in the computer code. Since these mistakes are an unavoidable part of programming, every good programmer has a system for fixing them and that system usually looks something like this:</p>
@@ -47,47 +49,45 @@
 	</article>
 </section>
 <section>
-	<h1>
-		Stage 1: Make Your Web Page 
-	</h1>
+	<h2>Stage 1: Make Your Web Page</h2>
 	<article>
-		<header>HTML Basics</header>
+		<h2>HTML Basics</h2>
 		<div class="content">
-			<h1>How the "Web" is structured?</h1>
+			<p class="title">How the "Web" is structured?</p>
 			<p><em>HTML</em> is the basic document format that contains all the contents the author wants to share with the rest of the web.</p>
 			<p>Many HTML files are hyperlinked through <em>URLs</em>. By hyperlinking the URLs, we'll be able to navigate from one file to another, hence the "web".</p>
 			<p><em>HTTP</em> is the internet protocol that allows my browser to access the files stored on the server.</p>
 			
-			<h1>HTML Basics</h1>
+			<p class="title">HTML Basics</p>
 			<p>HTML files are written with tags and attributes.</p>
 			<p>The open tag and its close tag together with their enclosed content are called <b>Element</b>. Note that some tags are <b>void tag</b> which by itself is an element. Such as <code>&#60;br></code> or <code>&#60;img></code>. Some tages are <b>inline tag</b>, which stays in the line of the text. Some others are <b>block tag</b>, which create a rectangle box surrounding the text or image and block the content off the flowing line of the previous text. There's also another type of tag called <b>Container Tags</b>. Unlike 'paragraph element' or 'header 1 element' which specifies the importance or purpose of the text, the <em>container tag</em> is invisible, and doesn't serve any specific content but to just <em>contain</em> the elements.</p>
 		</div>
 	</article>
 	<article>
-		<header>Structured Document</header>
+		<h2>Structured Document</h2>
 		<div class="content">
-			<h1>HTML, CSS and Javascript</h1>
+			<p class="title">HTML, CSS and Javascript</p>
 			<p><b>HTML</b> is like the structure of the house. <br>
 				<b>CSS</b> is like the interior design of the house - what color is the wall, what patter is the rug...<br>
 				<b>Javascript</b> is the tools to help you get around the house and to perform certain tasks. Things like the stove for cooking a meal, a screw driver to hang up a shelf… are a good analogy of what Javascript does to a webpage.
 			</p>
-			<h1>Tree-like Structure &amp; Boxify</h1>
-			<p>DOM, Document Object Model, "defines the logical structure of documents and the way a document is accessed and manipulated."(<a href="www.w3.org" target="_blank">W3 School</a>).</p>
+			<p class="title">Tree-like Structure &amp; Boxify</p>
+			<blockquote>DOM, Document Object Model, "defines the logical structure of documents and the way a document is accessed and manipulated." <br><a href="www.w3.org" target="_blank">W3 School</a>.</blockquote>
 			<p>HTML tags or elements are written in a nested structure, like a tree. We should carefully nesting the block elements inside the container elements, and inline elements inside the block elements. Also we need to pay attention to the semantic use of the the tags. For example, a title should go into tags like <code>&#60;h1></code> or <code>&#60;h2></code>. The main text content is often wrapped in <code>&#60;p></code>. HTML file should be well structured, readable, and ready for the browser to interprete.</p>
 			<p>Since all the HTML elements are ensencially a rectangular box, when a front end developer receives a design mockup from the graphic designer, the first thing she does is to 'boxify' the mockup, which will serve as the basis of the HTML structure she would write later.</p>
 
-			<h1>Why Use CSS</h1>
+			<p class="title">Why Use CSS</p>
 			<p>There're 3 ways to tell HTML what each of its elements should look like:</p>
 			<ol>
 				<li>Inside the element, define the style as element attribute:<br>
-					<pre><code class="language-markup">&#60;h1 style="color: #555; font-size: 18px; font-style: italic;">Title&#60;/h1></code></pre>
+					<pre><code class="language-markup">&#60;h3 style="color: #555; font-size: 18px; font-style: italic;">Title&#60;/h3></code></pre>
 				</li>
 				<li>Inside the <code>&#60;head></code> of the HTML file:<br>
 					<pre><code class="language-markup">&#60;html>
 	&#60;head>
 		&#60;title>My Page&#60;/title>
 		&#60;style>
-			h1 {
+			h3 {
 				color: #555;
 				font-size: 18px;
 				font-style: italic;
@@ -108,36 +108,42 @@
 	</code></pre></li>
 			</ol>
 			<p>The first method is not recommended. The last method is recommented.</p>
-			<p>When we write code, one basic principle is <b>DRY</b>, which stands for <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">Don't Repeat Yourself</a>. When you put all the style definition in each and every HTML element, understandably you'll ended up writing a lot of repeatitive code, like defining what the paragraph font should be, again and again, every time you have a new paragraph element. The second method is better than the first, because it allows you to define, for instance the <code>&#60;h1></code> once, then you'll be able to apply that same style to all the <code>&#60;h1></code> appeared in this HTML file.</p>
+			<p>When we write code, one basic principle is <b>DRY</b>, which stands for <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">Don't Repeat Yourself</a>. When you put all the style definition in each and every HTML element, understandably you'll ended up writing a lot of repeatitive code, like defining what the paragraph font should be, again and again, every time you have a new paragraph element. The second method is better than the first, because it allows you to define, for instance the <code>&#60;p></code> once, then you'll be able to apply that same style to all the <code>&#60;p></code> appeared in this HTML file.</p>
 			<p>However, the last method is the most recommended, especially when we're dealing with large websites where there're tons of HTML files that need to follow the same graphic style. By writing a separate CSS file, we can simply link to that same CSS from multiple HTML files. This way we avoided repeating ourselves.</p>
 			<p>The "Don't Repeat Yourself" principle is not just so that we can write less code; It's also important when we're debugging or dealing with changes. If the designer decided to change the color of all the hyperlinks in this website... I would be thanking myself for writing a separate CSS file.</p>
-			<h1>Cascading Style Sheets</h1>
+			<p class="title">Cascading Style Sheets</p>
 			<p>"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">specific</a> rule takes effect.</p>
 			<p>This idea is called <b>inheritance</b>.</p>
-			<h1>Flexbox</h1>
+			<p class="title">Flexbox</p>
 			<p>Positioning HTML block elements used to be a very complicated task. In the recent working draft, the W3 people came up with the like of <code>display: flex;</code>. Here's a very in-depth <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">tutorial on Flexbox</a>.</p>
 			<p>Here's a <a href="http://www.sketchingwithcss.com/samplechapter/cheatsheet.html" target="_blank">Flex Box Cheatsheet</a>.</p>
-			<h1>Remember to Validate the Code</h1>
+			<p class="title">Remember to Validate the Code</p>
 			<p>To validate the HTML, go to <a href="http://validator.w3.org/check" target="_blank">this link</a>.</p>
 			<p>To validate the CSS, go to <a href="http://jigsaw.w3.org/css-validator/" target="_blank">this link</a>.</p>
+            <p class="title">Extra Notes on HTML</p>
+            <p>This is the critique I got from the reviewer of my project, about using <code class="language-html">&#60;h1></code> under each and every of my <code class="language-html">&#60;article></code> tag:</p>
+            <blockquote>...HTML before being a language is an <b>agreement</b> (well most of the times :-) ). People agreed to use well defined pieces of text to abstract ideas and behaviour and this is a very powerful concept. If you have a personal opinion on how to "structure information" is nice but, it will be yours only...</blockquote>
+            <p>This message has a sounding impact on me.</p> 
+            <p>True. I never thought of HTML as an <b>agreement</b>. I come from a creative background. To me, everything is expressive, and everything is up to interpretation. I started learning HTML when HTML5 has already triumphed over most of the fuzzy standards. And I never paid attention to CSS vendor prefixes because I always used some sort of prefix-free plugins. Because I never needed to write production-ready code.</p>
+            <p>This piece of critique echoed with the concept of <b>Techonology Empathy</b> we talked about at the beginning of the class. While thank god HTML5 and CSS3 have paved the way for us creative people to learn coding, we still have to respect the fact that only under a strictly defined agreement can the world wide web exist to spread around the world.</p>
 		</div>
 	</article>
 </section>
 	<!-- Starting Course 2 -->
 <section>
-	<h1>Stage 2: Tell the Computer What to do</h1>
+	<h2>Stage 2: Tell the Computer What to do</h2>
 	<article>
-		<header>"Serious" Programming</header>
+		<h2>"Serious" Programming</h2>
 		<div class="content">
-			<h1>The difference between<br> a toaster and a computer</h1>
-			<p>A toaster has designated function - to toast. Even though you can add advanced features such as setting a timer, automatically adjusting the temperature based on thickness of the bread... etc., it’s function is still to toast.</p>
-			<p>A computer on the other hand, is an universal machine that can be programmed to perform different functions. A computer without any program installed on it is a dumb machine that can’t do anything. It doesn’t have any designated function. But programs do. Each and every program has a disgnate function to fulfill. Once a computer is programmed, it can do anything - any computational thing.</p>
+			<p class="title">The difference between<br> a toaster and a computer</p>
+			<p>A toaster has designated function - to toast. Even though you can add advanced features such as setting a timer, automatically adjusting the temperature based on thickness of the bread... etc., it's function is still to toast.</p>
+			<p>A computer on the other hand, is an universal machine that can be programmed to perform different functions. A computer without any program installed on it is a dumb machine that can't do anything. It doesn't have any designated function. But programs do. Each and every program has a disgnate function to fulfill. Once a computer is programmed, it can do anything - any computational thing.</p>
 			<p>So what is a program? A program is a specifically and strictly defined <em>sequence of steps</em>. When we program, we're essentially designing the sequence of steps the computer needs to take to fulfill the function we want. The program communicates our ideas to the computer in the language a computer understands.</p>
-			<h1>Natural Language vs. programming language</h1>
+			<p class="title">Natural Language vs. programming language</p>
 			<p>Natural language like English or Mandarin, is <em>ambiguous</em> and <em>verbose</em>. For instance the word 'biweekly' can mean either twice a week or every two weeks. Natual language relies a lot on the context to express its precise meaning, hence its verbosity.</p>
 			<p>Programming language follows a much more strict grammar, which doesn't leave any room for syntax error or subjective interpretation.
 			</p>
-			<h1>Backus-Naur Form</h1>
+			<p class="title">Backus-Naur Form</p>
 			<p><b>&#60;non-terminal> &#8594; replacement</b></p>
 			<p>BNF is a <em>notation technique</em> for <em>context-free grammars</em>, often used to describe the syntax of languages used in computing. <a href="http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form" target="_blank">BNF on Wikipedia</a>.</p>
 			<p>The derivation of the Backus-Naur Form goes like this:</p>
@@ -145,9 +151,9 @@
 		</div>
 	</article>
 	<article>
-		<header>Variables and Strings</header>
+		<h2>Variables and Strings</h2>
 		<div class="content">
-			<h1>Variables and Strings Basic</h1>
+			<p class="title">Variables and Strings Basic</p>
 			<p>The beginning of the session brushed on the basic concept of a <em>variable</em>... didn't find new things to note about ... </p>
 			<p>The <em>string</em>... Here are things I need to pay attention:</p>
 			<p><b>Unlike Javascript, Python cannot add a <em>string</em> to a number.</b></p>
@@ -178,7 +184,7 @@ print '''
     &#60;/div>
 &#60;/div>
 '''</code></pre>
-			<h1>String Indexing in Python</h1>
+			<p class="title">String Indexing in Python</p>
 			<p>Understand <code>s[x]</code> and <code>s[x:y]</code>:</p> 
 			<ul>
 				<li>The stirng <code> s</code> is considered as an array of characters.</li> 
@@ -186,14 +192,14 @@ print '''
 				<li>In the second instance, <code>x</code> and <code>y</code> can be any integer. If both <code>x</code> and <code>y</code> are within the string's range, and if <code>x</code> is smaller than <code>y</code>, <code>s[x:y]</code> outputs the characters between and include <code>s[x]</code> and <code>s[y-1]</code>.</li>
 				<li>If <code>x</code> equals or is larger than <code>y</code>, or if <code>x</code> and <code>y</code> are out of the range of the string, then <code>s[x:y]</code> will output an empty string. It's still a valid expression.</li>
 			</ul>
-			<p>The caveat here is, when you refer to a <b>index range</b> <code>s[x:y]</code> it will always be a valid expression, even if x or y is referring to a position that doesn’t exist in the string.</p>
+			<p>The caveat here is, when you refer to a <b>index range</b> <code>s[x:y]</code> it will always be a valid expression, even if x or y is referring to a position that doesn't exist in the string.</p>
 			<p>But when you refer to a <b>position</b>, <code>s[x]</code>, <em>x</em> has to be an index position <em>s</em> does have. For instance,</p>
 <pre class="language-python"><code>s = ''
 print s[0]    # Error</code></pre>
-<p>This would throw an error because <em>s</em> is empty, thus <code>s[0]</code> doesn’t exist.</p>
+<p>This would throw an error because <em>s</em> is empty, thus <code>s[0]</code> doesn't exist.</p>
 
 			<p>Also pay attention to <code>s[x]</code> when x &#60; 0. <code>s[-1]</code> is referring to the last letter in the string, when the string is not empty.</p>
-			<h1>Find String</h1>
+			<p class="title">Find String</p>
 			<pre class="language-python"><code>string.find(s, sub[, start[, end]])
 string.find(s, i)      # i is any integer</code></pre>
 			<p>
@@ -203,7 +209,7 @@ string.find(s, i)      # i is any integer</code></pre>
 print "text".find("Text")     # prints -1
 print "text".find("")         # prints 0
 print "text".find(" ")        # prints -1 </code></pre>
-			<p>The example below shed light on how a simple “Find and Replace” function seen in all kinds of text editors might actually be programmed:</p>
+			<p>The example below shed light on how a simple “Find and Replace" function seen in all kinds of text editors might actually be programmed:</p>
 			<pre class="language-python"><code>print "Example 3: using find to get rid of exclamation marks!!"
 example = "Wow! Python is great! Don't you think?"
 first = example.find('!')
@@ -215,13 +221,23 @@ print new_string
 </code></pre>
 			<p>Pay attention here how to use the 2nd argument in the function to find the occurences after the first one:</p>
 			<pre class="language-python"><code>second = example.find('!', first + 1)</code></pre>
+			<p>The caveat here is it's easy to confuse between these two expressions:</p>
+			<pre class="language-python"><code>text.find(subtext, i)
+# Find subtext from text, 
+# starting from index position i
+# the returned index is counted from the beginning of text
+
+text[i:].find(subtext)
+# First slice text at index i, 
+# then find subtext from the latter part after text[i]
+# returns the index started as 0 at text[i]</code></pre>  
 
 		</div>
 	</article>
 	<article>
-		<header>Input > Function > Output</header>
+		<h2>Input > Function > Output</h2>
 		<div class="content">
-			<h1>Input &amp; Output</h1>
+			<p class="title">Input &amp; Output</p>
 			<p><em>Input</em> is what you feed to a procedure, or a function. <em>Output</em> is the result of the procedure.</p>
 			<p>When we define a function to produce some result, we need to write an expression starting with <code>return</code>. Otherwise the function won't give you any result, or <em>output</em>.
 			<pre class="language-python"><code>def sum(a, b):
@@ -237,7 +253,7 @@ x, y = 5, 3
 print (x, y)      # >>>8
 print x           # >>>5</code></pre>
 
-			<h1>Procedure Composition</h1>
+			<p class="title">Procedure Composition</p>
 			<p><em>Procedure Composition</em> means to use the output of one procudure as the input of another procedure. For example:</p>
 			<pre class="language-python"><code>def sq(a):
 	return a * a
@@ -245,7 +261,194 @@ print sq(sq(35))      # >>> (35^2)^2</code></pre>
 			<p>Procedure Composition can lead to many interesting and complex results.</p>
 		</div>
 	</article>
+	<article>
+		<h2>If &amp; While</h2>
+		<div class="content">
+			<p class="title">The basic building blocks<br> of any computer program</p>
+			<p>In this lesson, I refreshed my knowledge in <code>if</code> statement and <code>while</code> statement. The way of thinking is very standard across different programming languages I learned before. There are a few minor syntax differences in Python to pay attention to:</p>
+			<ul>
+				<li>Python uses <code>or</code> and <code>and</code> instead of the <code>||</code> and <code>&amp;&amp;</code> operation.</li>
+				<li>Python doesn't take <code>++</code> or <code>--</code> as valid operators. You'll need to write out <code>+1</code> or <code>-1</code>.</li>
+				<li>Python doesn't understand <code>else if</code>. Instead, it needs to be <code>elif</code>.</li>
+				<li>In Python, <code>or</code> operator only evaluates what it needs to evaluate. For example:<br><pre class="language-python"><code>print is_an_error  
+#Returns an error, variable undefined.
+
+print True or is_an_error  
+#Returns True, 
+#even though is_an_error is undefined</code></pre></li>
+			</ul>
+			<p>In the lesson, Dave stated:</p>
+			<blockquote>Everything that can be computed mechanically by any machine, can be described as using a program that only uses the things that we've seen so far. All you need is <b>procedures</b>, <b>simple arithmetic</b>, with the <b>comparisons</b> and <b>“if" statements</b>.</blockquote>
+			<p>Remember this. Practice using IF statements and LOOPs. Composite the procedures you or other programmers have writtern. Then you'll be able to tell the computer to do very powerful things.</p>
+		</div>
+	</article>
+	<article>
+		<h2>Structured Data: List &amp; For Loop</h2>
+		<div class="content">
+			<p class="title">String vs. List</p>
+			<p>Lists can be accessed and sliced in the similar way as string. But List is more <b>structured</b> than the string.</p>
+			<img src="img/structured_data.png" alt="Explaining structured data" />
+			<p>Compare this:</p>
+			<pre class="language-python"><code>s = '''EXAMPLE 1: Lists can contain strings
+EXAMPLE 2: Lists can contain numbers
+EXAMPLE 3: Lists can be 'accessed' and 'sliced'
+'''
+
+p = [["EXAMPLE 1", "Lists can contain strings"],
+     ["EXAMPLE 2", "Lists can contain numbers"],
+     ["EXAMPLE 3", "Lists can be 'accessed' and 'sliced'"]]</code></pre>
+     		<p>We've learned how to output EXAMPLE by number from the string s, but it takes a lot of code. With a structured list like p, we can simply do this: <code>print p[0][1], p[1][1], p[2][1]</code></p>
+     		<p>Main differences between a string and a list:</p>
+     		<ul><li>String can only hold letters</li>
+				<li>List can hold anything, including list itself (nested list)</li>
+				<li>Mutation &amp; Aliasing - explained in the next chapter</li>
+			</ul>
+			<p>We can access a nested list:</p>
+			<pre class="language-python"><code>#             Name      Capital  Populations (millions)
+countries = [['China','Beijing',1350],
+             ['India','Delhi',1210],
+             ['Romania','Bucharest',21],
+             ['United States','Washington',307]]
+print countries[1][1]
+#>>> Delhi</code></pre>
+			<p class="title">Mutation</p>
+			<p>Mutation is a very important concept. So pay attention and practice a lot until you internalize this.</p>
+			<p>String cannot <em>mutate</em>; a list can <em>mutate</em>. What this means? In the explanation below, <code>s</code> is a string, and <code>p</code> is a list.</p>
+			<img src="img/mutation.png" alt="Mutation of an object" />
+			<p>When you change one letter in the string, the entire string changes; because a string is considered as one single variable. So this is wrong:</p>
+			<pre class="language-python"><code>s = "string"
+s[0] = "r"
+print s    
+#>>> Error: 'str' object does not support item assignment</code></pre>
+			<p>When you change one letter in the list, you just change the letter stored in that position, not the other letter or the entire list. In other words, a list is a collection of many variables. So this is correct:</p>
+			<pre class="language-python"><code>p = ['s', 't', 'r', 'i', 'n', 'g']
+p[0] = 'r'
+print p   
+#>>> rtring</code></pre>
+<p>The example below shows what result the mutation of an object can be:</p>
+<pre class="language-python"><code>
+p = ['s', 't', 'r', 'i', 'n', 'g']
+q = p
+p[0] = 'Y'
+print q      
+#>>> ['Y', 't', 'r', 'i', 'n', 'g']</code></pre>
+			<p>When we write down <code>p = ['s', 't', 'r', 'i', 'n', 'g']</code>, an object <code>['s', 't', 'r', 'i', 'n', 'g']</code> is created, and it exists with or without <code>p</code>. After this expression, we just assigned a name <code>p</code> to the object <code>['s', 't', 'r', 'i', 'n', 'g']</code>.</p>
+			<p>When we write <code>q = p</code>, we instructed the computer to create a new variable name called <code>q</code>, and pointed <code>q</code> to the same object <code>['s', 't', 'r', 'i', 'n', 'g']</code>.</p>
+			<p>When we changed the value of <code>p[0]</code> from <code>'r'</code> to <code>'Y'</code>, we were in fact changing the object <code>['s', 't', 'r', 'i', 'n', 'g']</code> to <code>['Y', 't', 'r', 'i', 'n', 'g']</code>. since <code>q</code> is referring to the same object as <code>p</code>, so <code>q</code> is changed too, without any explicit assignment.</p>
+			
+			<p class="title">Aliasing</p>
+			<p>Aliasing: when we have two different ways to refer to the same object, it’s called aliasing. Think “James Bond” and “007”.</p> 
+			<p>When you say:</p>
+			<pre class="language-python"><code>p = ['J', 'a', 'm', 'e', 's']
+q = p</code></pre>
+			<p>you created an alias <code>q</code>, which refers to the same object that <code>p</code> is pointed to. So if you change anything with <code>p[i]</code>, <code>q</code> is changed too. But if instead of <code>q = p</code>, you wrote <code> q = ['0', '0', '7']</code>, whatever you do to <code>p</code> won’t have any effect on <code>q</code>. Because <code>q</code> is pointing to a different object  <code>['0', '0', '7']</code>.</p>
+
+			<p class="title">What does it mean by “Object can be mutated”?</p>
+			<p>Compare these two functions:</p>
+			<pre class="language-python"><code>spy = [0,0,7]
+def replace_spy(p):
+    p[2] += 1
+    #return p
+
+replace_spy(spy)
+print spy
+#>>> [0,0,8]
+# The object spy is mutated.
+
+spy = 3
+def replace_spy(p):
+    p += 1
+    #return p
+
+replace_spy(spy)
+print spy
+#>>> 3
+# The value of spy is not affected by the replace_spy function</code></pre>
+			<p>So an object like <code>[0,0,7]</code> can be mutated by a function that only does assignment without a return statement. A variable cannot be mutate in the same way. If you want to change the value of a variable, you have to re-point it to a different value, hence the <code>return</code> mandate.</p>
+
+			<p class="title">List Operations</p>
+			<pre class="language-python"><code>list.append(element) 
+# Append an element to the end of the list
+list + list   
+# Similar to conciliation of strings
+len(list) 
+# Returns the number of elements in the list
+# Works for list and string, and any object that’s a collection of things
+
+
+# Note the difference between append and +
+
+p = [1, 2]
+q = [3, 4]
+print p + q
+#>>> [1, 2, 3, 4]
+
+p.append(q)  
+# p == [1, 2, [3, 4]]
+
+print len(p)     
+#>>> 3
+
+q[1] = 5
+print p   
+#>>> [1, 2, [3, 5]]
+# Modifying q will also change p</code></pre>
+
+			<p class="title">For Loops in Python</p>
+			<p><code>for e in list:</code> <br> Note the difference to Javascript. We <b>do not</b> write <code>for (i=0; i &#60; string.length(); i++)</code> in Python.
+			<pre class="language-python"><code>list.index(value)
+# Returns the index of the first element in list that matches value. 
+# If none of elements matches, returns error
+
+value in list
+# An expression that checks if value can be find in list. 
+# If yes, returns True. 
+# If not, returns False.
+
+value not in list
+# An expression that checks if value can be find in list. 
+# If yes, returns False. 
+# If not, returns True.
+
+# Example usage:
+def find_element(p, a):
+    if a in p:
+        return p.index(a)
+    return -1
+
+print find_element([1,2,3],3)
+#>>> 2
+
+print find_element(['alpha','beta'],'gamma')
+#>>> -1</code></pre>
+
+			<p class="title">Appending &amp; Adding</p>
+			<p>Look at the example below, and see the difference of <code>.append()</code>, <code>+</code> and <code>+=</code>.</p>
+			<pre class="language-python"><code>def list_test(p, q, r):
+    p.append('a')
+    q += ['a', 'b', 'c']
+    r = r + ['w']
+    return r
+
+
+first_input = [1,2,3]
+second_input = [4,5,6]
+third_input = [7,8,9]
+
+print list_test(first_input, second_input, third_input)
+#>>> [7,8,9,'w']
+print first_input
+#>>> [1,2,3,'a']
+print second_input
+#>>> [4,5,6,'a','b','c']
+print third_input
+#>>> [7,8,9]</code></pre>
+		</div>
+	</article>
 </section>
+<footer> 
+<!-- Include a sitemap in the footer. Leave it blank for now. -->
+</footer>
 <script src="js/prism.js"></script>
 </body>
 </html>
