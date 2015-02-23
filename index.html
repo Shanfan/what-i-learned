@@ -7,11 +7,11 @@
 </head>
 <body>
 <header>
-	<h1>Notes</h1>
-	<p>This is my personal notes on Udacity Nano Degree <a href="https://www.udacity.com/course/nd000" target="_blank">Intro to Programming</a>.</p>
+	<h1>Study Notes</h1>
+	<h2>This is my personal notes on Udacity Nano Degree <a href="https://www.udacity.com/course/nd000" target="_blank">Intro to Programming</a>.<br> The source code lives on my <a href="https://github.com/Shanfan/what-i-learned" target="_blank">GitHub</a>.</h2>
 </header>
 <section>
-	<h2>Introduction</h2>
+	<h2><!-- No title needed here. Left blank on purpose. --></h2>
 	<article>
 		<h2>Preparation</h2>
 		<div class="content">
@@ -32,7 +32,7 @@
 					</ul>
 				</li>
 				<li><b>Technological Empathy</b> - I find this one most enchanting:
-					<p>Computers are “stupid". We need to help the computer to understand what the problem is - speaking the language a computer would understand - so that the computer can do what we want it to do.</p>
+					<p>Computers are "stupid". We need to help the computer to understand what the problem is - speaking the language a computer would understand - so that the computer can do what we want it to do.</p>
 					<p>Computer empathy is the ability to understand what a computer is, how it works, and what it's good and bad at doing.</p>
 				</li>
 				<li><b>Debugging:</b>
@@ -48,6 +48,7 @@
 		</div>
 	</article>
 </section>
+<!-- Starting Course 1 -->
 <section>
 	<h2>Stage 1: Make Your Web Page</h2>
 	<article>
@@ -63,6 +64,7 @@
 			<p>The open tag and its close tag together with their enclosed content are called <b>Element</b>. Note that some tags are <b>void tag</b> which by itself is an element. Such as <code>&#60;br></code> or <code>&#60;img></code>. Some tages are <b>inline tag</b>, which stays in the line of the text. Some others are <b>block tag</b>, which create a rectangle box surrounding the text or image and block the content off the flowing line of the previous text. There's also another type of tag called <b>Container Tags</b>. Unlike 'paragraph element' or 'header 1 element' which specifies the importance or purpose of the text, the <em>container tag</em> is invisible, and doesn't serve any specific content but to just <em>contain</em> the elements.</p>
 		</div>
 	</article>
+
 	<article>
 		<h2>Structured Document</h2>
 		<div class="content">
@@ -150,6 +152,8 @@
 			<img src="img/backus-naur-derivation.png" alt="Backus Naur Form Derivation" />
 		</div>
 	</article>
+
+
 	<article>
 		<h2>Variables and Strings</h2>
 		<div class="content">
@@ -161,7 +165,8 @@
 			<pre class="language-python"><code>print "!" + 3        # This will result an error
 print "!" * 3        # This will output "!!!"</code></pre>
 			<p>Python uses tripple quote for multi-line text.</p>
-			<pre class="language-python"><code># In addition to using single quotes (') or double quotes (")
+			
+<pre class="language-python"><code># In addition to using single quotes (') or double quotes (")
 # to create a string, you can also use TRIPLE quotes to create
 # a multi-line string. 
 
@@ -184,6 +189,7 @@ print '''
     &#60;/div>
 &#60;/div>
 '''</code></pre>
+
 			<p class="title">String Indexing in Python</p>
 			<p>Understand <code>s[x]</code> and <code>s[x:y]</code>:</p> 
 			<ul>
@@ -194,14 +200,18 @@ print '''
 			</ul>
 			<p>The caveat here is, when you refer to a <b>index range</b> <code>s[x:y]</code> it will always be a valid expression, even if x or y is referring to a position that doesn't exist in the string.</p>
 			<p>But when you refer to a <b>position</b>, <code>s[x]</code>, <em>x</em> has to be an index position <em>s</em> does have. For instance,</p>
+
 <pre class="language-python"><code>s = ''
 print s[0]    # Error</code></pre>
-<p>This would throw an error because <em>s</em> is empty, thus <code>s[0]</code> doesn't exist.</p>
+
+			<p>This would throw an error because <em>s</em> is empty, thus <code>s[0]</code> doesn't exist.</p>
 
 			<p>Also pay attention to <code>s[x]</code> when x &#60; 0. <code>s[-1]</code> is referring to the last letter in the string, when the string is not empty.</p>
 			<p class="title">Find String</p>
-			<pre class="language-python"><code>string.find(s, sub[, start[, end]])
+
+<pre class="language-python"><code>string.find(s, sub[, start[, end]])
 string.find(s, i)      # i is any integer</code></pre>
+
 			<p>
 			Find the exact match <code>s</code> in <code>string</code>. It returns the lowest index position of the <code>s</code>. If a substring <code>sub</code> is provided, defined by the start and the end indice in the <code>string</code>, then this method will look for the target string <code>s</code> only in the substring.</p>
 			<p><code>.find</code> method returns -1 if the target string is not found in the searched string. The searched string and target string has to match exactly, including the upper or lower cases...</p>
@@ -209,7 +219,7 @@ string.find(s, i)      # i is any integer</code></pre>
 print "text".find("Text")     # prints -1
 print "text".find("")         # prints 0
 print "text".find(" ")        # prints -1 </code></pre>
-			<p>The example below shed light on how a simple “Find and Replace" function seen in all kinds of text editors might actually be programmed:</p>
+			<p>The example below shed light on how a simple "Find and Replace" function seen in all kinds of text editors might actually be programmed:</p>
 			<pre class="language-python"><code>print "Example 3: using find to get rid of exclamation marks!!"
 example = "Wow! Python is great! Don't you think?"
 first = example.find('!')
@@ -234,6 +244,8 @@ text[i:].find(subtext)
 
 		</div>
 	</article>
+
+
 	<article>
 		<h2>Input > Function > Output</h2>
 		<div class="content">
@@ -261,6 +273,7 @@ print sq(sq(35))      # >>> (35^2)^2</code></pre>
 			<p>Procedure Composition can lead to many interesting and complex results.</p>
 		</div>
 	</article>
+
 	<article>
 		<h2>If &amp; While</h2>
 		<div class="content">
@@ -278,10 +291,11 @@ print True or is_an_error
 #even though is_an_error is undefined</code></pre></li>
 			</ul>
 			<p>In the lesson, Dave stated:</p>
-			<blockquote>Everything that can be computed mechanically by any machine, can be described as using a program that only uses the things that we've seen so far. All you need is <b>procedures</b>, <b>simple arithmetic</b>, with the <b>comparisons</b> and <b>“if" statements</b>.</blockquote>
+			<blockquote>Everything that can be computed mechanically by any machine, can be described as using a program that only uses the things that we've seen so far. All you need is <b>procedures</b>, <b>simple arithmetic</b>, with the <b>comparisons</b> and <b>"if" statements</b>.</blockquote>
 			<p>Remember this. Practice using IF statements and LOOPs. Composite the procedures you or other programmers have writtern. Then you'll be able to tell the computer to do very powerful things.</p>
 		</div>
 	</article>
+
 	<article>
 		<h2>Structured Data: List &amp; For Loop</h2>
 		<div class="content">
@@ -337,13 +351,13 @@ print q
 			<p>When we changed the value of <code>p[0]</code> from <code>'r'</code> to <code>'Y'</code>, we were in fact changing the object <code>['s', 't', 'r', 'i', 'n', 'g']</code> to <code>['Y', 't', 'r', 'i', 'n', 'g']</code>. since <code>q</code> is referring to the same object as <code>p</code>, so <code>q</code> is changed too, without any explicit assignment.</p>
 			
 			<p class="title">Aliasing</p>
-			<p>Aliasing: when we have two different ways to refer to the same object, it’s called aliasing. Think “James Bond” and “007”.</p> 
+			<p>Aliasing: when we have two different ways to refer to the same object, it's called aliasing. Think "James Bond" and "007".</p> 
 			<p>When you say:</p>
 			<pre class="language-python"><code>p = ['J', 'a', 'm', 'e', 's']
 q = p</code></pre>
-			<p>you created an alias <code>q</code>, which refers to the same object that <code>p</code> is pointed to. So if you change anything with <code>p[i]</code>, <code>q</code> is changed too. But if instead of <code>q = p</code>, you wrote <code> q = ['0', '0', '7']</code>, whatever you do to <code>p</code> won’t have any effect on <code>q</code>. Because <code>q</code> is pointing to a different object  <code>['0', '0', '7']</code>.</p>
+			<p>you created an alias <code>q</code>, which refers to the same object that <code>p</code> is pointed to. So if you change anything with <code>p[i]</code>, <code>q</code> is changed too. But if instead of <code>q = p</code>, you wrote <code> q = ['0', '0', '7']</code>, whatever you do to <code>p</code> won't have any effect on <code>q</code>. Because <code>q</code> is pointing to a different object  <code>['0', '0', '7']</code>.</p>
 
-			<p class="title">What does it mean by “Object can be mutated”?</p>
+			<p class="title">What does it mean by "Object can be mutated"?</p>
 			<p>Compare these two functions:</p>
 			<pre class="language-python"><code>spy = [0,0,7]
 def replace_spy(p):
@@ -365,34 +379,6 @@ print spy
 #>>> 3
 # The value of spy is not affected by the replace_spy function</code></pre>
 			<p>So an object like <code>[0,0,7]</code> can be mutated by a function that only does assignment without a return statement. A variable cannot be mutate in the same way. If you want to change the value of a variable, you have to re-point it to a different value, hence the <code>return</code> mandate.</p>
-
-			<p class="title">List Operations</p>
-			<pre class="language-python"><code>list.append(element) 
-# Append an element to the end of the list
-list + list   
-# Similar to conciliation of strings
-len(list) 
-# Returns the number of elements in the list
-# Works for list and string, and any object that’s a collection of things
-
-
-# Note the difference between append and +
-
-p = [1, 2]
-q = [3, 4]
-print p + q
-#>>> [1, 2, 3, 4]
-
-p.append(q)  
-# p == [1, 2, [3, 4]]
-
-print len(p)     
-#>>> 3
-
-q[1] = 5
-print p   
-#>>> [1, 2, [3, 5]]
-# Modifying q will also change p</code></pre>
 
 			<p class="title">For Loops in Python</p>
 			<p><code>for e in list:</code> <br> Note the difference to Javascript. We <b>do not</b> write <code>for (i=0; i &#60; string.length(); i++)</code> in Python.
@@ -422,30 +408,56 @@ print find_element([1,2,3],3)
 print find_element(['alpha','beta'],'gamma')
 #>>> -1</code></pre>
 
-			<p class="title">Appending &amp; Adding</p>
-			<p>Look at the example below, and see the difference of <code>.append()</code>, <code>+</code> and <code>+=</code>.</p>
-			<pre class="language-python"><code>def list_test(p, q, r):
-    p.append('a')
-    q += ['a', 'b', 'c']
-    r = r + ['w']
-    return r
+			<p class="title">List Operations</p>
+			<pre class="language-python"><code>list.append(element) 
+# Append an element to the end of the list
+list + list   
+# Similar to conciliation of strings
+len(list) 
+# Returns the number of elements in the list
+# Works for list and string, and any object that's a collection of things</code></pre>
+			<p>The difference between <code>.append()</code> and <code>+</code> is very distinctive in the example below: </p>
+			<pre class="language-python"><code>p = [1, 2]
+q = [3, 4]
+print p + q
+#>>> [1, 2, 3, 4]
 
+p.append(q)  
+# p == [1, 2, [3, 4]]
+
+print len(p)     
+#>>> 3
+# The 3rd item in list p is [3, 4]
+
+# Modifying q will also change p
+q[1] = 5
+print p   
+#>>> [1, 2, [3, 5]]</code></pre>
+			<p>The difference between <code>+</code> and <code>+=</code> is much more subtle. While most of the time, <code> a += b </code> is a shorthand for <code> a = a + b </code>, when you use them in a function, they seem to produce different results: </p>
+			<pre class="language-python"><code>def list_test(q,r):
+    q += ['a', 'b', 'c']
+    r = r + ['a', 'b', 'c']
+    return q, r
 
 first_input = [1,2,3]
 second_input = [4,5,6]
-third_input = [7,8,9]
 
-print list_test(first_input, second_input, third_input)
-#>>> [7,8,9,'w']
+print list_test(first_input, second_input)
+#>>> ([1, 2, 3, 'a', 'b', 'c'], [4, 5, 6, 'a', 'b', 'c'])
+
 print first_input
-#>>> [1,2,3,'a']
+#>>> [1, 2, 3, 'a', 'b', 'c']
+
 print second_input
-#>>> [4,5,6,'a','b','c']
-print third_input
-#>>> [7,8,9]</code></pre>
+#>>> [4, 5, 6]</code></pre>
+			<p>It looks like within the function, <code>+</code> and <code>+=</code> produce the same result. But after running the function, <code>+=</code> mutates the original list, whereas <code>+</code> doesn't.</p>
+
 		</div>
 	</article>
 </section>
+
+
+
 <footer> 
 <!-- Include a sitemap in the footer. Leave it blank for now. -->
 </footer>
