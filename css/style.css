@@ -24,8 +24,10 @@ header {
 	text-align: center;
     padding: 0 2em;
 }
-header > p {
+header > h2 {
 	color: #fff;
+	font-weight: lighter;
+	font-size: 1.2em;
 }
 
 section {

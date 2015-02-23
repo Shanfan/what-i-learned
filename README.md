@@ -5,7 +5,7 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
 ## Stage 1 Submission
 > In this stage, you will use two languages, HTML and CSS, to create a web page to store your notes for the Nanodegree.
 
-#### 1st Submission
+### 1st Submission
 <dl>  
   <dt>Submission Dated</dt>      
   <dd>02/13/2015</dd>   
@@ -35,7 +35,7 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
       <li>Resubmitted the project.</li>
 </dl>
   
-#### 2nd Submission
+### 2nd Submission
 <dl>  
   <dt>Submission Dated</dt>      
   <dd>02/20/2015</dd>   
