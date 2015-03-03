@@ -9,9 +9,23 @@
 <header>
 	<h1>Study Notes</h1>
 	<h2>This is my personal notes on Udacity Nano Degree <a href="https://www.udacity.com/course/nd000" target="_blank">Intro to Programming</a>.<br> The source code lives on my <a href="https://github.com/Shanfan/what-i-learned" target="_blank">GitHub</a>.</h2>
+
+	<!-- Needs to come up with a more descriptive naming for the nav items 
+	Leave the nav list out for now. As the project moves further, construct the navigation so that the seciton content can be dynamically output based on the selection.
+	<nav>
+		<ul> 
+			<li>Getting Started</li>
+			<li>Stage 1</li>
+			<li>Stage 2</li>
+			<li>Stage 3</li>
+			<li>Stage 4</li>
+			<li>Stage 5</li>
+		</ul>
+	</nav>
+	-->
 </header>
 <section>
-	<h2><!-- No title needed here. Left blank on purpose. --></h2>
+	<h2>Getting Started</h2>
 	<article>
 		<h2>Preparation</h2>
 		<div class="content">
@@ -249,13 +263,33 @@ text[i:].find(subtext)
 	<article>
 		<h2>Input > Function > Output</h2>
 		<div class="content">
+
+			<p class="title">Procedure (a.k.a Function)</p>
+			<p>What Dave kept referring to as a <em>procedure</em>, is more commonly known as a <em>function</em> in programming. A <b>function</b>, is a strictly defined steps that tells the computer how to compute until it reaches to a result.</p>
+			<p>We can read a <a href="http://en.wikipedia.org/wiki/Pseudocode" target="_blank">pseudocode</a> function below to understand what it means to design a function with a sequence of steps:</p>
+			<pre class="language-python"><code>def french_toast(a_piece_of_bread):
+	if a_piece_of_bread is soft and fluffy: # make sure the bread is not toasted yet
+		turn_on_heat(300_degree)
+		set_timer(30)
+		flip(a_piece_of_bread)
+		set_timer(20)
+		trun_off_heat()
+	return a_piece_of_bread</code></pre>
+			<p>In the French Toast example above, the function takes a piece of bread that is soft and fluffy as an input, and outputs a piece of bread that is toasted. Anything happens between the statement <code>def french_toast(a_piece_of_bread):</code> and <code>return a_piece_of_bread</code> is the defined procedure.</p>
+
 			<p class="title">Input &amp; Output</p>
-			<p><em>Input</em> is what you feed to a procedure, or a function. <em>Output</em> is the result of the procedure.</p>
-			<p>When we define a function to produce some result, we need to write an expression starting with <code>return</code>. Otherwise the function won't give you any result, or <em>output</em>.
+			<p><em>Input</em> is what you feed to a procedure (a soft and fluffy piece of bread). <em>Output</em> is the result (a toasted piece of bread) of the procedure (toasting).</p>
+			<p>When we define a function to produce some result, we need to write an expression starting with <code>return</code>. Otherwise the function won't give you any <em>output</em>.
 			<pre class="language-python"><code>def sum(a, b):
 	a = a + b
 
-print sum(5,3)         # It will print "None".</code></pre>
+print sum(5,3)         # It will print "None".
+
+def sum(a, b):
+	a = a + b
+	return a
+
+print sum(5,3)         # It will print "8".</code></pre>
 			<p>Also, function doesn't change the value of the input. Here's another example:</p>
 			<pre class="language-python"><code>def sum(a,b):
 	a = a + b
@@ -265,12 +299,35 @@ x, y = 5, 3
 print (x, y)      # >>>8
 print x           # >>>5</code></pre>
 
+
 			<p class="title">Procedure Composition</p>
 			<p><em>Procedure Composition</em> means to use the output of one procudure as the input of another procedure. For example:</p>
 			<pre class="language-python"><code>def sq(a):
 	return a * a
 print sq(sq(35))      # >>> (35^2)^2</code></pre>
-			<p>Procedure Composition can lead to many interesting and complex results.</p>
+			<p>Procedure Composition can lead to many interesting and complex results. In the French Toast example, we actually composed several procedures inside <code>french_toast</code> to complete the procedure.</p>
+						<pre class="language-python"><code>def french_toast(a_piece_of_bread):
+	if a_piece_of_bread is soft and fluffy:
+		turn_on_heat(300_degree)     
+		set_timer(30)
+		flip(a_piece_of_bread)
+		set_timer(20)
+		trun_off_heat()
+	return a_piece_of_bread
+
+# To make french_toast successful, we need to define these procedures:
+def turn_on_heat(degree):
+...
+
+def set_timer(time):
+...
+
+def flip(thing):
+...
+
+def turn_off_heat():
+...</code></pre>
+			<p>The idea of composing the procedures is based on the fact that once you defined a procedure, you'll never have to repeat it. You can just reuse that procedure again and again. <b>In programming, we never need to solve the same problem twice.</b> This is a very powerful idea. Think about this: now that we've already defined <code>french_toast</code>, <code>turn_on_heat</code>, <code>set_timer</code>... etc, we can reuse them to complete even more ambitious tasks, such as <code>brunch_for_two</code> or <code>toast_and_egg</code>. :-)</p>
 		</div>
 	</article>
 
@@ -278,7 +335,7 @@ print sq(sq(35))      # >>> (35^2)^2</code></pre>
 		<h2>If &amp; While</h2>
 		<div class="content">
 			<p class="title">The basic building blocks of any computer program</p>
-			<p>In this lesson, I refreshed my knowledge on <code>if</code> statement and <code>while</code> statement. The way of thinking is very standard across different programming languages I learned before. There are a few minor syntax differences in Python to pay attention to:</p>
+			<p>In this lesson, I refreshed my knowledge on <code>if</code> statement and <code>while</code> statement. The way of thinking is very standard across different programming languages I learned before. So I'm going to skip the lengthy explanation of these statements. However, there are a few minor syntax differences in Python I need to accustom myself to:</p>
 			<ul>
 				<li>Python uses <code>or</code> and <code>and</code> instead of the <code>||</code> and <code>&amp;&amp;</code> operation.</li>
 				<li>Python doesn't take <code>++</code> or <code>--</code> as valid operators. You'll need to write out <code>+1</code> or <code>-1</code>.</li>
