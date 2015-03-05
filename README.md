@@ -76,6 +76,15 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
 ## Stage 2 Submission
 > In this stage, you will use the Python programming language to automatically generate the HTML code for your web page. This will let you quickly and easily add new notes to your page without having to unnecessarily rewrite any code.
 
+### 1st Submission
+<dl>  
+  <dt>Submission Dated</dt>      
+  <dd>02/13/2015</dd>   
+  
+  <dt>Assessment</dt>
+  <dd>Pending</dd>
+</dl>
+
 ## Stage 3 Submission
 >In this stage, you will use code that's already been written by other programmers to embed YouTube videos directly into your web page.
 
