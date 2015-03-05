@@ -2,6 +2,8 @@
 
 This is my assignment project at Udacity, [Intro to Programming](https://www.udacity.com/course/nd000). In a 2~4 month period, I'll be updating this repo and submit the files for review.
 
+[Stage 1 Submission](#stage-1-submission) | [Stage 2 Submission](#stage-2-submission) | [Stage 3 Submission](#stage-3-submission) | [Stage 4 Submission](#stage-4-submission) | [Stage 5 Submission](#stage-5-submission)
+
 ## Stage 1 Submission
 > In this stage, you will use two languages, HTML and CSS, to create a web page to store your notes for the Nanodegree.
 
@@ -79,7 +81,7 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
 ### 1st Submission
 <dl>  
   <dt>Submission Dated</dt>      
-  <dd>02/13/2015</dd>   
+  <dd>03/04/2015</dd>   
   
   <dt>Assessment</dt>
   <dd>Pending</dd>
