@@ -89,7 +89,7 @@ all_articles = [[sections[0], "Preparation", '''
 
 def gen_article_html(title, content):
 	# Generate each article that has a title and a body of content
-	article_title = '<h2>' + title + '</h2>'
+	article_title = '<h3>' + title + '</h3>'
 	article_content = '''
 		<div class="content">
 			''' + content + '''
@@ -104,16 +104,16 @@ def gen_article_html(title, content):
 def gen_section_html(section, articles):
  	# Put all the articles that belong to the same section together.
   	section_title = '<h2>' + section + '</h2>'
-  	articles_html = ''
+  	section_content = ''
   	
   	for article in articles:
   		if article[0] == section:
-  			articles_html += gen_article_html(article[1], article[2])
+  			section_content += gen_article_html(article[1], article[2])
   	
   	section_html = '''<section>
-  	''' + section_title + articles_html + '''
-</section>
-'''
+  	''' + section_title + section_content + '''
+	</section>
+	'''
   	return section_html
 
 def generate_html(sections, articles):

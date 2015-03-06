@@ -55,7 +55,7 @@ article {
 	background: #fcfcfc;
 	box-sizing: border-box;
 }
-article h2 {
+article h3 {
 	font: lighter 1em/1 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: .15em;

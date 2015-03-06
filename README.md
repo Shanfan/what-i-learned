@@ -1,6 +1,10 @@
 # Project Description
 
-This is my assignment project at Udacity, [Intro to Programming](https://www.udacity.com/course/nd000). In a 2~4 month period, I'll be updating this repo and submit the files for review.
+This is my assignment project at Udacity, [Intro to Programming](https://www.udacity.com/course/nd000). In a 2~4 month period, I'll be updating this repo and submit the files for review.  
+  
+As of 03/05/2015, while I'm at Stage 2, this project is consisted of a static HTML page where I take notes for the course, and a stand alone html\_generator.py file to test some basic functions for HTML input/output.  
++ To view the course notes: Open index.html in a browser.  
++ To run the Python file: Open html_generator.py in a text editor such as Sublime Text, then go to Tools > Build.
 
 [Stage 1 Submission](#stage-1-submission) | [Stage 2 Submission](#stage-2-submission) | [Stage 3 Submission](#stage-3-submission) | [Stage 4 Submission](#stage-4-submission) | [Stage 5 Submission](#stage-5-submission)
 
@@ -35,6 +39,8 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
       <li>Added explaining comments next to the lines I commented out.</li>
       <li>Updated the HTML with proper tags.</li>
       <li>Resubmitted the project.</li>
+    </ul>
+  </dd>
 </dl>
   
 ### 2nd Submission
@@ -73,6 +79,8 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
     <ul>
       <li>Updated README.md to explain the project and it's progress</li>
       <li>Updated index.md according to the feedback.</li>
+    </ul>
+  </dd>
 </dl>
 
 ## Stage 2 Submission
@@ -84,7 +92,37 @@ This is my assignment project at Udacity, [Intro to Programming](https://www.uda
   <dd>03/04/2015</dd>   
   
   <dt>Assessment</dt>
-  <dd>Pending</dd>
+  <dd>Does not meet specifications</dd>
+
+  <dt>File Reviewed</dt>
+  <dd><ul>
+    <li>html_generator.py</li>
+    <li>README.md</li>
+  </ul></dd>
+
+  <dt>Reviewer Feedback</dt>
+  <dd>
+    <ul>
+      <li> It is better your section title and article title use different head size.</li>  
+      <li> Try to use string formatting for multiline HTML output. And follow the PEP8 or Google Python Style Guide. See the following links:</li> 
+        <ul> 
+          <li>http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format</li>
+          <li>https://docs.python.org/2/library/string.html</li>
+          <li>https://docs.python.org/2/library/stdtypes.html#str.format</li>  
+          <li>str.format is very common and useful when generating html string.</li> 
+        </ul>
+      <li>It is better use python <a href="https://docs.python.org/2/tutorial/inputoutput.html#reading-and-writing-files">file IO</a> to write html file.</li>
+      <li>Your readme file does not include the steps to run your projects.</li>
+    </ul>
+  </dd>
+  
+  <dt>My Response</dt>
+  <dd>
+    <ul>
+      <li>Updated README.md to include steps to run the projects.</li>
+      <li>Updated html_generator.py with better variable name.</li>
+    </ul>
+  </dd>
 </dl>
 
 ## Stage 3 Submission
