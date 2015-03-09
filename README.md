@@ -120,7 +120,40 @@ As of 03/05/2015, while I'm at Stage 2, this project is consisted of a static HT
   <dd>
     <ul>
       <li>Updated README.md to include steps to run the projects.</li>
-      <li>Updated html_generator.py with better variable name.</li>
+      <li>Updated html_generator.py with better variable name.</li> 
+    </ul>
+  </dd>
+</dl>
+
+### 2nd Submission
+<dl>  
+  <dt>Submission Dated</dt>      
+  <dd>03/06/2015</dd>   
+  
+  <dt>Assessment</dt>
+  <dd>Meet specifications</dd>
+
+  <dt>File Reviewed</dt>
+  <dd><ul>
+    <li>html_generator.py</li>
+    <li>README.md</li>
+  </ul></dd>
+
+  <dt>Reviewer Feedback</dt>
+  <dd>
+    <ul>
+      <li> Example of str.format()</li>  
+      <li> Follow the PEP8 or Google Python Style Guide.</li>
+      <li> Use Terminal to run Python</li>
+    </ul>
+  </dd>
+  
+  <dt>My Response</dt>
+  <dd>
+    <ul>
+      <li>Learned str.format() with more examples.</li>
+      <li>Downloaded Python IDLE to write and fun Python programs.</li>
+      <li>Reading though style guide documents.</li> 
     </ul>
   </dd>
 </dl>
