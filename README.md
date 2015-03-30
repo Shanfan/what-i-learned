@@ -2,9 +2,7 @@
 
 This is my assignment project at Udacity, [Intro to Programming](https://www.udacity.com/course/nd000). In a 2~4 month period, I'll be updating this repo and submit the files for review.  
   
-As of 03/05/2015, while I'm at Stage 2, this project is consisted of a static HTML page where I take notes for the course, and a stand alone html\_generator.py file to test some basic functions for HTML input/output.  
-+ To view the course notes: Open index.html in a browser.  
-+ To run the Python file: Open html_generator.py in a text editor such as Sublime Text, then go to Tools > Build.
+As of 03/29/2015, while I'm at Stage 3, this project is consisted of a static HTML page where I take notes for the course.
 
 [Stage 1 Submission](#stage-1-submission) | [Stage 2 Submission](#stage-2-submission) | [Stage 3 Submission](#stage-3-submission) | [Stage 4 Submission](#stage-4-submission) | [Stage 5 Submission](#stage-5-submission)
 
@@ -160,6 +158,35 @@ As of 03/05/2015, while I'm at Stage 2, this project is consisted of a static HT
 
 ## Stage 3 Submission
 >In this stage, you will use code that's already been written by other programmers to embed YouTube videos directly into your web page.
+
+### 1st Submission
+<dl>  
+  <dt>Submission Dated</dt>      
+  <dd>03/29/2015</dd>   
+  
+  <dt>Assessment</dt>
+  <dd>-</dd>
+
+  <dt>File Reviewed</dt>
+  <dd><ul>
+    <li>-</li>
+    <li>-</li>
+  </ul></dd>
+
+  <dt>Reviewer Feedback</dt>
+  <dd>
+    <ul>
+      <li> -</li>
+    </ul>
+  </dd>
+  
+  <dt>My Response</dt>
+  <dd>
+    <ul>
+      <li>-</li>
+    </ul>
+  </dd>
+</dl>
 
 ## Stage 4 Submission
 >In this stage you will put your web page online and set up a server so that users who visit your page can add notes of their own (if you let them of course).

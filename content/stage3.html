@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes on Intro to Programming Nano Degree</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/prism.css">
+</head>
+<body>
+<!-- WIP thoughts:
+		The <header>, <footer> and content <section> should be independent from each other. Meaning, the content inside of each of these 3 tags, should be stored separately, and gets injected into the skeleton page separately.
+		
+		From the "Fresh Tomatoes Movie Site" example I saw in Couse 3, I had some rough ideas of how I might be able to construct my backend code.
+
+		But as of 03/18/2015, I haven't learned enough tools to build a dynamic page that uses server-side scripts to allow the user interact with the site content from the client side. So I'll leave the thoughts here, and return to this idea after I finish Courrse 4 & 5.
+ -->
+<header>
+	<h1>Study Notes</h1>
+	<h2>This is my personal notes on Udacity Nano Degree <a href="https://www.udacity.com/course/nd000" target="_blank">Intro to Programming</a>.<br> The source code lives on my <a href="https://github.com/Shanfan/what-i-learned" target="_blank">GitHub</a>.</h2>
+
+	<!-- Needs to come up with a more descriptive naming for the nav items 
+	Leave the nav list out for now. As the project moves further, construct the navigation so that the seciton content can be dynamically output based on the selection.
+	<nav>
+		<ul> 
+			<li>Getting Started</li>
+			<li>Stage 1</li>
+			<li>Stage 2</li>
+			<li>Stage 3</li>
+			<li>Stage 4</li>
+			<li>Stage 5</li>
+		</ul>
+	</nav>
+	-->
+</header>
+<section>
+	<h2>Stage 3: More In-depth Python</h2>
+
+
+	<article>
+		<h3>The Power of Abstraction</h3>
+		<div class="content">
+			<p class="time-stamp">Mar 22, 2015</p>
+			<p class="title">Abstraction</p>
+			<blockquote>Abstration is the idea that you don't need to know everything behind the curtain, while being able to make use of the code written by others.</blockquote>
+			<p>Modules serve as a good example of abstraction.  You don't need to know how the <code>time</code> module is constructed in Python, you can already use that module, such as calling <code>time.current()</code> to display the current time.</p>
+
+			<p>Abstraction is a relative concept. In Python's vocabulary, a module is an abstraction of the statements and definitions you want to reuse. The modules can also be "abstracted" into a <a href="https://docs.python.org/2/tutorial/modules.html#packages" target="_blank">package</a>, which organizes a collection of modules interreferencing each other. </p>
+
+			<p class="title">Modules</p>
+			<p>In this course, we have used <a href="https://docs.python.org/2/library/webbrowser.html#module-webbrowser" target="_blank">webbrowser</a> module, <a href="https://docs.python.org/2/library/os.html#module-os" target="_blank">os</a> module, <a href="https://docs.python.org/2/library/time.html#module-time" target="_blank">time</a> module and <a href="https://docs.python.org/2/library/turtle.html#module-turtle" target="_blank">turtle</a> module, all from the <a href="https://docs.python.org/2/py-modindex.html" target="_blank">Python core modules</a>. To demonstrate the power of abstration, we did an exercise to create a program that checks the profanity words from a text file.</p>
+
+			<p>Before Kunal showed us how to write it in Python, we were asked to plan the profanity checker in plain English. Here's what I came up with:</p>
+			<ol>
+				<li>Come up with a list of all the profanity words I want to keep an eye on</li>
+				<li>The program should go through a text message, word by word</li>
+				<li>If any word matches the profanity words I defined in step 1, throw an alert.</li>
+				<li>If not, move on until finish the scanning.</li>
+			</ol>
+			<p>In Kunal's demo, this entire procedure seems to be handled by an online service already existed. I didn't need to write any function to produce the above steps. All I need to do is to combine that service with a Python module <code>urllib</code>, like this:</p>
+			<pre class="language-python"><code>import urllib
+
+profanity_URL = "http://www.wdyl.com/profanity?q="
+# This URL is the existing profanity service we're using
+# I can append any string after "?q=" and put the URL in a browser
+# The program will take my string as an input
+# Then output the profanity words if any, or "False" 
+
+def read_text():
+    quotes = open("/profanity/movie_quotes.txt")
+    # open(path/to/file) looks like a build in method that creates a file object for Python
+    contents_of_file = quotes.read()
+    # The file object seems to have a method 'obj.read()' that scans and stores the content of the file
+    print contents_of_file
+    quotes.close()
+    # Hard to tell what exactly 'obj.close()' does.
+    # Maybe it closes itself? check the documentation.
+    check_profanity(contents_of_file)
+
+def check_profanity(text_to_check):
+    connection = urllib.urlopen(profanity_URL + text_to_check)
+    # urllib module has defined a function called urlopen
+    # rllib.ulropen(url\path) seems to work the same way as open(path\to\file)
+    # except that it opens a URL instead of file on my desktop
+    output = connection.read()
+    print output
+    connection.close()
+
+
+read_text()</code></pre>
+			<p>Voila!</p>
+
+			<p class="title">Class &amp; Object</p>
+			<p>The concept of <b>class</b> can be seen as a categorization of a group of things (objects) that share similar attributes. Kunal's analogy is, the class is like the blueprint of a building, whereas the object, an instance of the class, is the actual building that's been built according to the blueprint.</p>
+			<p>My analogy: cat can be a class. An instance of cat can be my domestic short hair called Lover. Another instance of cat is my friend’s black Persian cat called Puffy.</p>
+
+			<p>That part is easy. Kunal didn't go much deeper than the "blueprint" metaphor. Out of curiosity, I digged around. So it looks like when it comes to the parent-child relationship, Python's definition of <code>class</code> and <code>object</code> is not nearly as complicated as the <a href="http://en.wikipedia.org/wiki/Family_tree_of_the_Greek_gods" target="_blank">Greek Gods Family Tree</a>.</p>
+			<img src="../img/class_object.png" title="class and object" /><br>
+			<span class="fig-caption">Image courtesy of <a href="https://www.youtube.com/playlist?list=PL29B31797A997C41E" target="_blank">Brian Will's 7 Videos of Python</a></span>
+			<p>This is a bit tougue in the cheek. Everything is an object in Python. And every object has a class. <code>str="This is a string."</code> is an object in the string class. <code>def some_function:</code> is an object in the fucntion class.</p>
+			<p>A class itself is written in Python as an object, to reduce the confusion, the Class object in Python is called "Type". What Brian said in his slide takes a while to settle in my mind:</p>
+			<ul>
+				<li> The <em>object</em> class is an instance of the <em>type</em> class and itself</li>
+				<li> The <em>type</em> class is an instance of the <em>object</em> class and itself</li>
+			</ul>
+			<p>It doesn't make any sense if I haven't read a lot of code... I first bummped into theses concepts back in 2009 when I tried to learn Processing. After having read a lot of code in different languages, what Brian said above, finally clicked.</p>
+
+			<p>Once I understood the family tree of Python classes, this <a href="http://google-styleguide.googlecode.com/svn/trunk/pyguide.html#Classes" target="_blank">Style Guide</a> made much more sense:</p>
+			<img src="../img/class_style_guide.png" title="style guide screenshot" />
+		</div>
+	</article>
+	<article>
+		<h3>Constructing Your Own Class</h3>
+		<div class="content">
+			<p class="title">Class Constructor</p>
+			<p>Besides the pre-defined classes by Python, we can also write our own classes.</p>
+			<img src="../img/construct_a_class.png" title="construct a class" />
+			<p>A class definition starts with a <b>Constructor</b>, which is a function named <code>__init__</code>, and it takes in some attributes of the the object as its arguments.</p>
+			<pre class="language-python"><code>class Cat():
+	'''Kitty Cat'''
+	sound = ["meow", "miau", "purr"]
+	def __init__(self, hair_type, hair_color, eye_color):
+		self.hair_type = hair_type
+		self.hair_color = hair_color
+		self.eye_color = eye_color
+
+	def happy(self):
+		return Cat.sound[2]
+
+lover = Cat("short hair", "calico", "brown")
+
+print "Lover is a {color} {hair} {definition}.".format(color = lover.hair_color, hair=lover.hair_type, definition=lover.__doc__)
+# lover.hair_color is an object attribute.
+
+print "When she's happy, she would {}.".format(lover.happy())
+# lover.happy() is an object method.
+
+# >>> Lover is a calico short hair Kitty Cat.
+# >>> When she's happy, she would purr.</code></pre>
+
+			<p>In there above example, notice there're two types of veriables, the <b>Class Variable</b> and the <b>Instance Variable</b>. Instance variables are specific to each instances, such as long hair or short hair, blue eyes or brown eyes... etc. Class varibles are universal to all cats: all of the cats can make these <code>sound = ["meow", "miau", "purr"]</code>.</p>
+			<blockquote>
+				<p><b>Instance variable:</b> A variable that is defined inside a method and belongs only to the current instance of a class.</p>
+
+				<p><b>Class variable:</b> A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables aren't used as frequently as instance variables are.</p>
+
+				<p class="fig-caption">- From <a href="http://www.tutorialspoint.com/python/python_classes_objects.htm" target="_blank">Overview of OOP Terminology</a></p>
+			</blockquote>
+			
+			<p>I've seen a lot of tutorials showing examples of class variable and instance variable. <a href="http://www.ibiblio.org/g2swap/byteofpython/read/class-and-object-vars.html" target="_blank">This one</a> is the best demonstration: Great example, very easy to follow, and humorous.</p>
+
+			<p class="title">Extended Study</p>
+			<p>The child object will always <b>inherit</b> its parents' attributes. In the Cat example I wrote above, any cat instance will inherit all the class variables from the parent.</p>
+			<p>To go deeper, <a href="https://youtu.be/mzGn-N7yQdg?list=PL29B31797A997C41E" target="_blank">this video</a> explains the inheritance hierarchy when there are multiple parents and grand parents palyed for a child object.</p>
+			<img src="../img/multiple_inheritance.png" />
+			<p><a href="https://youtu.be/EwGDjTLo49k?list=PL29B31797A997C41E" target="_blank">Another video</a> in the same series explained the scope of the variable, class &amp; function in Python. Very useful to understand.</p>
+		</div>
+	</article>
+	<article>
+		<h3>Turtle &amp; Mathematical Drawing</h3>
+		<div class="content">
+			<p class="title">My first try on Turtle</p> 
+
+			<p>I found this nice <a href="http://www.skulpt.org/" target="_blank">Javascript library Sculpt.js</a> that runs Python on the client side, good for interactive demo. In the code below, change the first argument of <code>draw_spiral</code> then hit "Run", it will generate different patterns:</p>
+			<form> 
+				<textarea class="language-python" id="yourcode" cols="40" rows="10">import turtle
+
+def draw_spiral(sides, line_color):
+    t = turtle.Turtle()
+    t.speed(100)
+    t.color(line_color)
+    
+    radius = 360 / sides
+
+    for l in range(0, 160, 5):
+        t.lt(radius)
+        t.fd(l)
+
+draw_spiral(3.04, "#999")
+				</textarea><br /> 
+				<button type="button" onclick="runit()">Run</button> 
+			</form> 
+			<pre id="output" ></pre> 
+			<canvas id="mycanvas" ></canvas> 
+
+			<p class="title">Mathematical Drawing</p>
+			<p>I've always been interested in mathematical drawing. Turtle is a cute program to get started. But as I dived deeper in its documentation, I think it has some innate limitations to draw complicated patterns or to render animations. When I get more time, I want to return to <a href="https://processing.org/" target="_blank">Processing</a>. <em>Processing</em> is the first programming language I tried to teach myself. It was 2009. The book <em>Processing, A Programming Handbook for Visual Designers and Artists</em> introduced me to the basic ideas of Object Oriented Programming. My study on Processing was interrupted as I deferred to study HTML/CSS/Javascript and some other stuff. Now that I've gained much more skills, I hope I would take a new perspective at studying <em>Processing</em>. In the 5 years time, they've built <a href="http://p5js.org/" target="_blank">P5.js</a> and <a href="http://py.processing.org/" target="_blank">Processing.py</a>... I'm thrilled to look deeper! So awesome! I only regret I couldn't grow faster to catch up the speed of programming evolution.</p> 
+			<p>Here's a great tutorial on <a href="http://interactivepython.org/runestone/static/pythonds/Recursion/graphical.html" target="_blank">Visualizing Recursion</a> with Turtle.</p>
+
+			
+		</div>
+	</article>
+
+		<article>
+		<h3>Stage 3 Learning Summary</h3>
+		<div class="content">
+			<p class="time-stamp">Mar 18, 2015</p>
+			<p class="title">Narratives, Tutorials &amp; References</p>
+			<p>
+				I started to follow <a href="https://www.youtube.com/user/briantwill/playlists" target="_blank">Brian Will on YouTube</a> lately. He gives very succinct lectures to explain the entire thing about programming, computer science... etc. In one of his intro videos, he says, on your journey of learning to program, you're going to encounter 3 types learning materials:
+			</p>
+			<ul>
+				<li><b>Narratives</b><br>
+					The goal of a narrative is to help you build a conceptual model in your head about the subject matter, so that when you come across a problem, you know how to approach it, where to investigate.
+				</li>
+				<li><b>Tutorials</b><br>
+					A tutorial is a demonstration of a way to solve one particular problem. It's always good to attempt a problem yourself at first, then to watch the tutorial to compare your solution with others'.
+				</li>
+				<li><b>References</b><br>
+					You consult a reference of the subject matter when you don't remember a certain concept or rule. But if you haven't built a conceptual model in your head, the reference is hardly useful.
+				</li>
+			</ul>
+			<p>
+				 It's important to know the distinctions. Having the awareness of what kind of learning material we were studying at that moment, will help us better assess our knowledge and skills. 
+			</p> 
+			<p>
+				If you have done a lot of tutorial exercises, and you have the access to a good reference, you may have the illusion of knowing it all. However, without a strong conceptual model in your mind, you won't be able to find innovative usage of a technology. This is a problem I noticed in many online courses I've taken.
+			</p>
+			<p>
+				There's nothing wrong to learn from tutorials and references. Sometimes we'll even be able to form a narrative of our own after having done lots and lots of exercises. We just need to be aware. 
+			</p>
+			<p class="title">My learning exprience at this stage</p>
+			<p>At this stage, Kunal the instructor walked us through quite many use cases of how Python module works: <b>OS module</b> to manupulate system files, <b>Turtle</b> module to draw shapes, <a href="http://www.twilio.org/" target="_blank"><b>Twilio</b></a> to send text messages from web to mobile, <b>URLLib</b> module to open URLs... It's easy to get lost in the fun of all the small exercises. I was very overwhelmed. I finished the course material in a week, but it took me another two weeks to research on the subject matter, and finally formulated a narrative of my own.</p>
+			<p>Upon the self reflection, I realized that I learn the best if I start from a good narrative, and then branch out to tutorials and references.</p>
+		</div>
+	</article>
+</section>
+
+<footer> 
+<!-- Include a sitemap in the footer. Leave it blank for now. -->
+</footer>
+<script src="../js/prism.js"></script>
+<script src="../js/jquery.1.9.0.min.js" type="text/javascript"></script> 
+<script src="../js/skulpt.min.js" type="text/javascript"></script> 
+<script src="../js/skulpt-stdlib.js" type="text/javascript"></script> 
+<!-- The code below is not my work. It's copied from Skupt.js demo page -->
+<script type="text/javascript"> 
+
+  function outf(text) { 
+      var mypre = document.getElementById("output"); 
+      mypre.innerHTML = mypre.innerHTML + text; 
+  } 
+  function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+              throw "File not found: '" + x + "'";
+      return Sk.builtinFiles["files"][x];
+  }
+
+  function runit() { 
+     var prog = document.getElementById("yourcode").value; 
+     var mypre = document.getElementById("output"); 
+     mypre.innerHTML = ''; 
+     Sk.canvas = "mycanvas";
+     Sk.pre = "output";
+     Sk.configure({output:outf, read:builtinRead}); 
+     try {
+        eval(Sk.importMainWithBody("<stdin>",false,prog)); 
+     }
+     catch(e) {
+         alert(e.toString())
+     }
+  } 
+</script> 
+</body>
+</html>

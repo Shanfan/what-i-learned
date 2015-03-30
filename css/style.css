@@ -1,4 +1,6 @@
+/* offline dev mode
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300|Roboto:300,400|Pacifico);
+*/
 
 body, html {
 	padding: 0;
@@ -60,7 +62,7 @@ article h3 {
 	text-transform: uppercase;
 	letter-spacing: .15em;
 	color: #fff;
-	background: #66e5d1;
+	background: #4BD7C0;
 	margin: 0;
 	padding: 1em;
 }
@@ -83,14 +85,6 @@ article p, article ul, article li{
 article p {
 	margin: 0 0 1em 0;
 }
-article ul {
-	/*padding: 0 1em;*/
-	/* ul element may or may not need more styling. Leave the default rendering for now */
-}
-article em {
-	/*background-color: #f5e9e6;*/
-	/* em element might need better visual distingtion. Revisit this later. */
-}
 
 
 article blockquote {
@@ -99,4 +93,11 @@ article blockquote {
 	border-left: solid 4px #f4e8e5;
 	background-color: #f5f2f0;
 	font-style: italic;
+}
+
+.time-stamp {
+	font-size: .75em;
+}
+.fig-caption {
+	font-size: .8em;
 }
